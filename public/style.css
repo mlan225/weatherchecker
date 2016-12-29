@@ -2,12 +2,11 @@ body{
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/093/469/original/vector-illustration-of-colorful-cartoon-landscape.jpg"); 
     background-size: cover; 
     background-repeat: no-repeat;
+    background-position: center; 
 }
 
 .container.main{
-    margin-top: 10em;
+    padding-top: 10em;
 }
 
-a{
-    text-align: center; 
-}
+
