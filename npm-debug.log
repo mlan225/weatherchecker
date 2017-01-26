@@ -1,0 +1,71 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v4.6.1/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v4.6.1/bin/npm',
+1 verbose cli   'bugs',
+1 verbose cli   'weatherapi' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.1
+4 silly mapToRegistry name weatherapi
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry data Result {
+7 silly mapToRegistry   raw: 'weatherapi',
+7 silly mapToRegistry   scope: null,
+7 silly mapToRegistry   name: 'weatherapi',
+7 silly mapToRegistry   rawSpec: '',
+7 silly mapToRegistry   spec: 'latest',
+7 silly mapToRegistry   type: 'tag' }
+8 silly mapToRegistry uri https://registry.npmjs.org/weatherapi
+9 verbose request uri https://registry.npmjs.org/weatherapi/latest
+10 verbose request no auth needed
+11 info attempt registry request try #1 at 6:15:51 PM
+12 verbose request id 32a08106ec367f09
+13 verbose etag "DS6AHJ629E6T9A5BBBIMN03K0"
+14 http request GET https://registry.npmjs.org/weatherapi/latest
+15 http 304 https://registry.npmjs.org/weatherapi/latest
+16 verbose headers { date: 'Thu, 26 Jan 2017 18:15:51 GMT',
+16 verbose headers   via: '1.1 varnish',
+16 verbose headers   'cache-control': 'max-age=300',
+16 verbose headers   etag: '"DS6AHJ629E6T9A5BBBIMN03K0"',
+16 verbose headers   age: '0',
+16 verbose headers   connection: 'keep-alive',
+16 verbose headers   'x-served-by': 'cache-ord1721-ORD',
+16 verbose headers   'x-cache': 'MISS',
+16 verbose headers   'x-cache-hits': '0',
+16 verbose headers   'x-timer': 'S1485454551.324129,VS0,VE74',
+16 verbose headers   vary: 'Accept-Encoding' }
+17 silly get cb [ 304,
+17 silly get   { date: 'Thu, 26 Jan 2017 18:15:51 GMT',
+17 silly get     via: '1.1 varnish',
+17 silly get     'cache-control': 'max-age=300',
+17 silly get     etag: '"DS6AHJ629E6T9A5BBBIMN03K0"',
+17 silly get     age: '0',
+17 silly get     connection: 'keep-alive',
+17 silly get     'x-served-by': 'cache-ord1721-ORD',
+17 silly get     'x-cache': 'MISS',
+17 silly get     'x-cache-hits': '0',
+17 silly get     'x-timer': 'S1485454551.324129,VS0,VE74',
+17 silly get     vary: 'Accept-Encoding' } ]
+18 verbose etag https://registry.npmjs.org/weatherapi/latest from cache
+19 verbose get saving weatherapi to /home/ubuntu/.npm/registry.npmjs.org/weatherapi/latest/.cache.json
+20 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+21 silly bugs url https://github.com/mariuskubilius/weatherapi/issues
+22 verbose stack Error: spawn xdg-open ENOENT
+22 verbose stack     at exports._errnoException (util.js:907:11)
+22 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:178:32)
+22 verbose stack     at onErrorNT (internal/child_process.js:344:16)
+22 verbose stack     at nextTickCallbackWith2Args (node.js:442:9)
+22 verbose stack     at process._tickCallback (node.js:356:17)
+23 verbose cwd /home/ubuntu/workspace/weatherapi
+24 error Linux 4.2.0-c9
+25 error argv "/home/ubuntu/.nvm/versions/node/v4.6.1/bin/node" "/home/ubuntu/.nvm/versions/node/v4.6.1/bin/npm" "bugs" "weatherapi"
+26 error node v4.6.1
+27 error npm  v2.15.9
+28 error path xdg-open
+29 error code ENOENT
+30 error errno ENOENT
+31 error syscall spawn xdg-open
+32 error enoent spawn xdg-open ENOENT
+32 error enoent This is most likely not a problem with npm itself
+32 error enoent and is related to npm not being able to find a file.
+33 verbose exit [ 1, true ]
