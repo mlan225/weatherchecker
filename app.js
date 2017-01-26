@@ -14,8 +14,10 @@
  
 //mongoose config=================================
 
-// mongoose.connect("mongodb://localhost/weatherchecker");
-mongoose.connect("mongodb://weatherchecker:Warpenguin95@ds131119.mlab.com:31119/weatherchecker"); //the link for mongo labs database
+
+mongoose.connect(process.env.DATABASEURL);
+// mongoose.connect("mongodb://weatherchecker:Warpenguin95@ds131119.mlab.com:31119/weatherchecker"); //the link for mongo labs database
+
  
 //mongoose config=================================
 
