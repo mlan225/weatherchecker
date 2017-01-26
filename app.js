@@ -14,9 +14,9 @@
  
 //mongoose config=================================
 
+var url = process.env.DATABASEURL || "mongodb://localhost/weatherchecker"; //makes a default database for local 
+mongoose.connect(url); //connect to local database if using local
 
-mongoose.connect(process.env.DATABASEURL);
-// mongoose.connect("mongodb://weatherchecker:Warpenguin95@ds131119.mlab.com:31119/weatherchecker"); //the link for mongo labs database
 
  
 //mongoose config=================================
