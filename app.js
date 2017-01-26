@@ -1,5 +1,5 @@
  var express = require("express"); 
- var weather = require("openweather-apis"); 
+ 
  var bodyParser = require("body-parser"); 
  
  var mongoose = require("mongoose"); 
@@ -85,43 +85,43 @@ app.get("/", function(req,res){
 
 
 //results page --- send the data with the city query to here to use with the api. 
-app.get("/results", function(req, res) {
+// app.get("/results", function(req, res) {
     
-    weather.setLang('en');
-    // English - en, Russian - ru, Italian - it, Spanish - es (or sp), 
-    // Ukrainian - uk (or ua), German - de, Portuguese - pt,Romanian - ro, 
-    // Polish - pl, Finnish - fi, Dutch - nl, French - fr, Bulgarian - bg, 
-    // Swedish - sv (or se), Chinese Tra - zh_tw, Chinese Sim - zh (or zh_cn), 
-    // Turkish - tr, Croatian - hr, Catalan - ca 
+//     weather.setLang('en');
+//     // English - en, Russian - ru, Italian - it, Spanish - es (or sp), 
+//     // Ukrainian - uk (or ua), German - de, Portuguese - pt,Romanian - ro, 
+//     // Polish - pl, Finnish - fi, Dutch - nl, French - fr, Bulgarian - bg, 
+//     // Swedish - sv (or se), Chinese Tra - zh_tw, Chinese Sim - zh (or zh_cn), 
+//     // Turkish - tr, Croatian - hr, Catalan - ca 
  
  
-    // set city by name 
-    weather.setCity(query); 
+//     // set city by name 
+//     weather.setCity(query); 
     
-     // 'metric'  'internal'  'imperial' 
- 	weather.setUnits('imperial');
+//      // 'metric'  'internal'  'imperial' 
+//  	weather.setUnits('imperial');
  	
  	
-    // check http://openweathermap.org/appid#get for get the APPID 
- 	weather.setAPPID('c9b18f54cb76c49dcab4a8cae4a6e940'); 
+//     // check http://openweathermap.org/appid#get for get the APPID 
+//  	weather.setAPPID('c9b18f54cb76c49dcab4a8cae4a6e940'); 
  	
  
-    // // get 3 days forecast 
-    // weather.getWeatherForecastForDays(3, function(err, obj){
-    //     if(err){
-    //         console.log(err); 
-    //     }else{
-    //         // res.send(obj["list"]); 
-    //         console.log(obj["list"]);
-    //         var temp1 = (obj["list"]);
-    //         var temp2 = (obj["list"]);
-    //         var temp3 = (obj["list"]);
-    //         res.render("results",{temp1:temp1, temp2:temp2,temp3:temp3,query:query});     
-    //     }
+//     // // get 3 days forecast 
+//     // weather.getWeatherForecastForDays(3, function(err, obj){
+//     //     if(err){
+//     //         console.log(err); 
+//     //     }else{
+//     //         // res.send(obj["list"]); 
+//     //         console.log(obj["list"]);
+//     //         var temp1 = (obj["list"]);
+//     //         var temp2 = (obj["list"]);
+//     //         var temp3 = (obj["list"]);
+//     //         res.render("results",{temp1:temp1, temp2:temp2,temp3:temp3,query:query});     
+//     //     }
         
-    // });
+//     // });
     
-});
+// });
 
 
 
