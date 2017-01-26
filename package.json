@@ -3,22 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "author": "Marvin Anderson",
-  "license": "ISC"
   "dependencies": {
     "body-parser": "^1.15.2",
-    "ejs": "^2.5.5",
-    "express": "^4.14.0",
-    "express-session": "^1.14.2",
-    "mongoose": "^4.7.7",
     "openweather-apis": "^3.0.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7",
+    "ejs": "^2.5.5",
     "passport": "^0.3.2",
-    "passport-local": "^1.0.0",
+    "express-session": "^1.14.2",
     "passport-local-mongoose": "^4.0.0",
+    "passport-local": "^1.0.0",
     "request": "^2.79.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marvin anderson",
+  "license": "ISC"
 }
