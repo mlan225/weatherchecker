@@ -1,0 +1,42 @@
+
+<% include partials/header %> 
+
+<div class="ui main text container" id="paddingTop">
+    <div class="ui huge header centered" id="textShadow">Your Favorites
+        <br><a class="ui primary button" href="/favorites/new">Add A City</a>
+    </div>
+    
+    <div class="ui segment" id="favoritesSegment">
+        <div class="ui divided items centered">
+            
+            <% for (var i = 0; i < foundFavorites.length; i++){ %> 
+                
+                <div class="item">
+                
+                        <form action="/search/favorite" method="POST" id="marginAuto"> 
+                            <h1>
+                                <input type="text" name="favorite" value="<%= foundFavorites[i].city  %>" readonly>
+                                <button>Search!</button>
+                            </h1>
+                        </form>
+                </div>
+                   
+            <% }; %>
+            
+        </div>
+    </div>
+    
+    
+    
+</div>
+
+
+
+
+
+
+    
+
+
+<% include partials/footer %>
+

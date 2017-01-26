@@ -1,27 +1,265 @@
 <% include partials/header %>
+ 
+<div id="centeredcontent">
 
-<div class="ui main text container">
-    <div class="ui huge header centered">
-        Today's weather for <%=city%> will be...<br>
-        <h4>(If the results do not appear correctly, please refresh the page)</h4>
-    </div>
-    <div class="ui segment">
-        <div class="ui divided items">
-            <div class="item">
-                <h1> A temperature of <br><span><%= cityTemp %></span> &#8457;</h1>
-            </div>
-            <div class="item">
-                <h1>A <%= cityDesc %> behavior</h1>
-            </div>
-            <div class="item">
-                <h1>And a humidity of <br> <span><%= cityHumidity %>%</span></h1>
-            </div>
-            <div class="item">
-                <a class="ui primary button" href="/search">Back to Search</a>
-            </div>
+    <div class="ui main text container" id="weatherResultsBox">
+       
+        <div class="ui two column centered">
+                <div class="ui huge header centered" id="weatherResultsHeader">
+                    <h1>Today In <%= query %>, And For The Next Two Days, The Weather Will Be...</h1>
+                </div>
+                
+                <div class="ui segment" id="weatherSegment">
+                    <div class="ui divided items">
+                        
+                        <% var today = new Date(); %>
+                        <% var dd = today.getDate(); %>
+                        <% var mm = today.getMonth()+1; %> <!--//January is 0!-->
+                        <% var yyyy = today.getFullYear(); %>
+                        
+                        <% if(dd<10) { %>
+                            <% dd='0'+dd %>
+                        <% } %>
+                        
+                        <% if(mm<10) { %> 
+                            <% mm='0'+mm %> 
+                        <% } %> 
+                        
+                        <% today = mm+'/'+dd+'/'+yyyy; %>
+                        
+                                                
+                        
+                        <h1 class="ui header"><%= today %></h1>
+                        <div class="item">
+                            <div class="ui grid container">
+                               
+                                    
+                                     <div class=" four wide column" id="dayWeather">
+                                        <h1>Day</h1>
+                                            <hr>
+                                                <h3><%= temp1[0]["temp"].day %>&#8457</h3>
+                                                <h3>High of <%= temp1[0]["temp"].max %></h3>
+                                                <h3>Low of <%= temp1[0]["temp"].min%></h3>
+                                                <h3>"<%= temp1[0]["weather"][0].description %>"</h3>
+                                                
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    
+                                    <div class="four wide column">
+                                        <h1>Morning</h1>
+                                            <hr>
+                                                <h3><%= temp1[0]["temp"].morn %>&#8457</h3>
+                                                
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    <div class=" four wide column">
+                                        <h1>Evening</h1>
+                                            <hr>
+                                                <h3><%= temp1[0]["temp"].eve %>&#8457</h3>
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    <div class="four wide column">
+                                        <h1>Night</h1>
+                                            <hr>
+                                                <h3><%= temp1[0]["temp"].night %>&#8457</h3>
+                                               
+                                                
+                                          
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="ui segment" id="weatherSegment">
+                    <div class="ui divided items">
+                        
+                        <% var today = new Date(); %>
+                        <% var dd = today.getDate(); %>
+                        <% var mm = today.getMonth()+1; %> <!--//January is 0!-->
+                        <% var yyyy = today.getFullYear(); %>
+                        
+                        
+                        <% dd += 1; %>
+                        
+                        <% if(dd<10) { %>
+                            <% dd='0'+dd %>
+                        <% } %>
+                        
+                        <% if(mm<10) { %> 
+                            <% mm='0'+mm %> 
+                        <% } %> 
+                        
+                        <% today = mm+'/'+dd+'/'+yyyy; %>
+                            
+                        <h1 class="ui header"><%= today %></h1>
+                        
+                        <div class="item">
+                            <div class="ui grid container">
+                               
+                                    
+                                     <div class=" four wide column" id="dayWeather">
+                                        <h1>Day</h1>
+                                            <hr>
+                                                <h3><%= temp1[1]["temp"].day %>&#8457</h3>
+                                                <h3>High of <%= temp1[1]["temp"].max %></h3>
+                                                <h3>Low of <%= temp1[1]["temp"].min%></h3>
+                                                <h3>"<%= temp1[1]["weather"][0].description %>"</h3>
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    
+                                    <div class="four wide column">
+                                        <h1>Morning</h1>
+                                            <hr>
+                                                <h3><%= temp1[1]["temp"].morn %>&#8457</h3>
+                                                
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    <div class=" four wide column">
+                                        <h1>Evening</h1>
+                                            <hr>
+                                                <h3><%= temp1[1]["temp"].eve %>&#8457</h3>
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    <div class="four wide column">
+                                        <h1>Night</h1>
+                                            <hr>
+                                                <h3><%= temp1[1]["temp"].night %>&#8457</h3>
+                                               
+                                                
+                                          
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="ui segment" id="weatherSegment">
+                    <div class="ui divided items">
+                        
+                        <% var today = new Date(); %>
+                        <% var dd = today.getDate(); %>
+                        <% var mm = today.getMonth()+1; %> <!--//January is 0!-->
+                        <% var yyyy = today.getFullYear(); %>
+                        
+                        
+                        <% dd += 2; %>
+                        
+                        <% if(dd<10) { %>
+                            <% dd='0'+dd %>
+                        <% } %>
+                        
+                        <% if(mm<10) { %> 
+                            <% mm='0'+mm %> 
+                        <% } %> 
+                        
+                        <% today = mm+'/'+dd+'/'+yyyy; %>
+                            
+                        <h1 class="ui header"><%= today %></h1>
+                        
+                        <div class="item">
+                            <div class="ui grid container">
+                               
+                                    
+                                     <div class=" four wide column" id="dayWeather">
+                                        <h1>Day</h1>
+                                            <hr>
+                                                <h3><%= temp1[2]["temp"].day %>&#8457</h3>
+                                                <h3>High of <%= temp1[2]["temp"].max %></h3>
+                                                <h3>Low of <%= temp1[2]["temp"].min%></h3>
+                                                <h3>"<%= temp1[2]["weather"][0].description %>"</h3>
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    
+                                    <div class="four wide column">
+                                        <h1>Morning</h1>
+                                            <hr>
+                                                <h3><%= temp1[2]["temp"].morn %>&#8457</h3>
+                                                
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    <div class=" four wide column">
+                                        <h1>Evening</h1>
+                                            <hr>
+                                                <h3><%= temp1[2]["temp"].eve %>&#8457</h3>
+                                                
+                                                
+                                          
+                                    </div>
+                                    
+                                    <div class="four wide column">
+                                        <h1>Night</h1>
+                                            <hr>
+                                                <h3><%= temp1[2]["temp"].night %>&#8457</h3>
+                                               
+                                                
+                                          
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                
+                
+        
+                
+               
+                
+                 
         </div>
     </div>
+    
+    <a href="/search" class="ui primary button large">Back To Search</a>
 </div>
+
+
+
 
 
 

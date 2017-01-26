@@ -11,8 +11,26 @@
                 <div class="header item"><i Class="Umbrella icon"></i><a href="/">WeatherChecker</a></div>
                     <a href="/" class="item">Home</a>
                     <a href="/search" class="item">Search</a>
-                </div> 
-            </div>
+              
+                
+                <div class="right menu">
+                    <div class="ui item">
+                        
+                        <% if(!currentUser){ %><!--if no current user show these-->
+                              <a href="/login" class="item">Log In</a>
+                              <a href="/register" class="item">Register</a>
+                            <% }else{ %> <!--otherwise show these-->
+                              <a href = "/favorites" class="item">Welcome Back, <%= currentUser.username %>!</a> <!--the .username comes from the 'user' model--> 
+                              <a href="/logout" class="item">logout</a>
+                        <% } %> 
+
+                    </div>
+                </div>
+            </div> 
+         
         </div>
+
+
+<div class="wrapper">
         
     

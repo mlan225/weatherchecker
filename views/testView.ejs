@@ -1,0 +1,11 @@
+<h1>TestView page</h1>
+
+
+<li>Day 1</li>
+    <ul>
+        <li>Day: <%= temp1[1]["temp"].day %></li>
+        <% var weatherCode1= temp1[1]["weather"][0].icon; %>
+        <li><img src="http://openweathermap.org/img/w/<%=weatherCode1%>.png"></li>
+    </ul>
+    
+

@@ -1,12 +1,123 @@
 body{
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/093/469/original/vector-illustration-of-colorful-cartoon-landscape.jpg"); 
     background-size: cover; 
-    background-repeat: no-repeat;
     background-position: center; 
 }
 
-.container.main{
+#paddingTop{
     padding-top: 10em;
 }
 
+#weatherResultsHeader{
+  padding-top: 5%;
+  color: white; 
+  text-shadow: 2px 2px #000000; 
+}
+
+
+#weatherResultsBox{
+  border: 15px solid black;
+  border-radius: 5%; 
+  margin-top: 10%;
+  height: 60%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+}
+
+#weatherSegment{
+  border: 3px solid black;
+  border-radius: 5%; 
+}
+
+#dayWeather{
+  border-right: 3px dotted black;
+}
+
+.column{
+  text-align: center;
+}
+
+#centeredcontent{
+  text-align:center;
+}
+
+#centeredcontent a{
+  margin-top: 1%; 
+}
+
+
+@media (max-width: 1200px){
+  #weatherResultsBox{
+    margin-top: 16%;
+  }
+}
+
+@media (max-width: 992px){
+  #weatherResultsBox{
+    margin-top: 18%;
+  }
+}
+
+@media (max-width: 786px){
+  #weatherResultsBox{
+    margin-top: 30%;
+  }
+}
+
+@media (max-width: 480px){
+  #weatherResultsBox{
+    margin-top: 50%;
+  }
+}
+
+@media (max-width: 320px){
+  #weatherResultsBox{
+    margin-top: 40%;
+  }
+}
+
+
+#centerSegment{
+  border: 3px solid black;
+  border-radius: 5%; 
+}
+
+#favoritesSegment{
+  border: 15px solid black;
+  border-radius: 5%; 
+  max-height: 300px; 
+  overflow-y: scroll;
+}
+
+#textShadow {
+  color: white;
+  text-shadow: 2px 2px #000000;
+}
+
+
+#marginAuto{
+  margin: auto;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+.footer,
+.push {
+  height: 50px;
+}
+
+.footer{
+    background-color: rgb(27, 28, 29);
+}
 

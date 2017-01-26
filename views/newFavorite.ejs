@@ -1,0 +1,30 @@
+<% include partials/header %> 
+
+
+<div class="ui main text container" id="paddingTop">
+    <div class="ui huge header centered" id="textShadow">Add A New Favorite</div>
+    <div class="ui segment" id="centerSegment">
+        <div class="ui divided items">
+            <div class="item">
+                <h1 id="marginAuto">Add A Location To Favorites</h1>
+            </div>
+            <div class="item">
+                <form action="/favorites/new" method="POST" id="marginAuto">
+                    <input type="text" name="city" placeholder="city">
+                    <input class="ui green button small" type="submit">
+                </form>
+            </div>
+            <div class="item">
+                <a class="ui primary button" href="/" id="marginAuto">Back To Favorites</a>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+
+    
+    
+
+
+<% include partials/footer %>
