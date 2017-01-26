@@ -14,8 +14,8 @@
  
 //mongoose config=================================
 
-// mongoose.connect("mongodb://localhost/weatherchecker");
-mongoose.connect("mongodb://weatherchecker:Warpenguin95@ds131119.mlab.com:31119/weatherchecker");
+mongoose.connect("mongodb://localhost/weatherchecker");
+// mongoose.connect("mongodb://weatherchecker:Warpenguin95@ds131119.mlab.com:31119/weatherchecker");
  
 //mongoose config=================================
 
